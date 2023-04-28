@@ -2,13 +2,13 @@
 
   let listArray = [],
       listName = '';
-
+//создаем и возвращаум заголовок приложения
   function createAppTitle(title) {
       let appTitle = document.createElement("h2");
       appTitle.innerHTML = title;
       return appTitle;
   }
-
+  //создаем и возвращаем форму для создания дела
   function createTodoItemForm() {
       let form = document.createElement("form");
       let input = document.createElement("input");
@@ -40,7 +40,7 @@
           button
       };
   }
-
+// создаем и возвращыем список элементов
   function createTodoList() {
       let list = document.createElement("ul");
       list.classList.add("list-group");
@@ -49,11 +49,14 @@
 
   function createTodoItem(obj) {
       let item = document.createElement("li");
+      //кеопки помещаем в элемент который красиво покажет их в одной группе
       let buttonGroup = document.createElement("div");
       let doneButton = document.createElement("button");
       let deleteButton = document.createElement("button");
-
-
+      
+      //устанавливаем стили для элемента списка а также для размещения кнопок 
+      //в его правой части с помощью flex
+    
       item.classList.add(
           "list-group-item",
           "d-flex",
